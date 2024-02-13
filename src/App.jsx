@@ -1,5 +1,10 @@
 import './App.css'
+import { Navbar } from './components'
 
 export default function App() {
-  return <div>Hello, World</div>
+  return (
+    <div>
+      <Navbar/>
+    </div>
+    )
 }
