@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import "./banner.css";
 import transformer from "../images/transformer.jpg";
 import MovieContent from "../components/MovieContent";
+import MovieDate from "../components/MovieDate";
 
 function Banner() {
   const [movies, setMovies] = useState([]);
@@ -31,9 +32,7 @@ function Banner() {
 
             {/* right column */}
             <div className="col-md-6">
-              <div className="date active">
-                <h2>On 14th August</h2>
-              </div>
+              <MovieDate />
               <div className="trailer d-flex align-items-center justify-content-center active">
                 <a
                   href="#"

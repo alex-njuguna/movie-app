@@ -51,36 +51,6 @@
   opacity: 1;
 }
 
-
-
-.banner .date {
-  position: relative;
-  visibility: hidden;
-  opacity: 0;
-  transform: scale(0);
-  transition: 1s;
-  z-index: 1000;
-}
-
-.banner .date.active {
-  visibility: visible;
-  opacity: 1;
-  transform: scale(1);
-}
-
-.banner .date h2 {
-  font-family: "Figtree", sans-serif;
-  color: white;
-  text-transform: uppercase;
-  font-size: 7rem;
-  text-align: center;
-  margin-bottom: 20px;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-  -webkit-mask: linear-gradient(black 0 0), linear-gradient(black 0 0);
-  -webkit-mask-clip: text, padding-box;
-  -webkit-mask-composite: xor;
-}
-
 .banner .trailer {
   position: relative;
   visibility: hidden;
@@ -119,26 +89,26 @@
 }
 
 .banner .playBtn::before {
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    content: '';
-    background: transparent;
-    border: 10px solid white;
-    border-radius: 50%;
-    animation: button 1s linear infinite;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  content: "";
+  background: transparent;
+  border: 10px solid white;
+  border-radius: 50%;
+  animation: button 1s linear infinite;
 }
 
 @keyframes button {
-    0%,
-    100% {
-        opacity: 0.3;
-        filter: blur(4px);
-    }
-    50% {
-        opacity: 1;
-        filter: blur(10px);
-    }
+  0%,
+  100% {
+    opacity: 0.3;
+    filter: blur(4px);
+  }
+  50% {
+    opacity: 1;
+    filter: blur(10px);
+  }
 }
