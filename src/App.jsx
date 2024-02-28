@@ -1,10 +1,11 @@
 import './App.css'
-import Header from "./pages/Header";
+import {Header, Banner} from "./pages";
 
 export default function App() {
   return (
-    <div>
+    <>
       <Header />
-    </div>
+      <Banner></Banner>
+    </>
   );
 }
