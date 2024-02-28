@@ -1,5 +1,6 @@
 import "./movieContent.css";
 import titleImage from "../images/transformer-title.png";
+import Button from "./Button";
 
 function MovieContent() {
   return (
@@ -19,7 +20,13 @@ function MovieContent() {
         nihil similique iure sunt veritatis! Iure fuga est praesentium sapiente
         incidunt!
       </p>
-      <div className="button">Button</div>
+      <Button
+        icon={<i className="fa-solid fa-house"></i>}
+        name="Home"
+        color="#ff3700"
+        bgColor="#fff"
+      />
+      <Button icon={<i className="fa-solid fa-plus"></i>} name="My List" />
     </div>
   );
 }
