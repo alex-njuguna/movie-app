@@ -4,6 +4,7 @@ import "./banner.css";
 import transformer from "../images/transformer.jpg";
 import MovieContent from "../components/MovieContent";
 import MovieDate from "../components/MovieDate";
+import PlayBtn from "../components/PlayBtn";
 
 function Banner() {
   const [movies, setMovies] = useState([]);
@@ -27,21 +28,13 @@ function Banner() {
           <div className="row">
             {/* left column */}
             <div className="col-md-6">
-            <MovieContent />
+              <MovieContent />
             </div>
 
             {/* right column */}
             <div className="col-md-6">
               <MovieDate />
-              <div className="trailer d-flex align-items-center justify-content-center active">
-                <a
-                  href="#"
-                  className="playBtn btn btn-danger btn-outline-danger"
-                >
-                  <i className="fa-solid fa-play fa-lg text-danger"></i>
-                </a>
-                <p>Watch Trailer</p>
-              </div>
+              <PlayBtn />
             </div>
           </div>
         </div>
