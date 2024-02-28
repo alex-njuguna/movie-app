@@ -1,3 +1,4 @@
+import Button from "../components/Button";
 import NavListItem from "../components/NavListItem";
 import Search from "../components/Search";
 import navListData from "../data/navListData";
@@ -16,6 +17,10 @@ function Header() {
           ))}
         </ul>
         <Search />
+        <Button
+          icon={<i className="fa-solid fa-right-to-bracket"></i>}
+          name="sign in"
+        />
       </header>
     </div>
   );
