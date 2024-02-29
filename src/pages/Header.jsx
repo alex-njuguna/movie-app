@@ -16,11 +16,11 @@ function Header() {
             <NavListItem key={nav._id} nav={nav} />
           ))}
         </ul>
-        <Search />
+        {/* <Search />
         <Button
           icon={<i className="fa-solid fa-right-to-bracket"></i>}
           name="sign in"
-        />
+        /> */}
       </header>
     </div>
   );
