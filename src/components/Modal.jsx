@@ -23,7 +23,7 @@ function Modal({ movie, status, toggleModal }) {
       <iframe
         ref={iframeRef}
         width="1280"
-        height="720"
+        height="580"
         src={movie.video}
         title={`${movie.title} | Official Trailer`}
         frameBorder="0"
