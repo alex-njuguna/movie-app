@@ -1,5 +1,7 @@
-import './App.css'
-import {Header, Banner} from "./pages";
+import "./App.css";
+// swiper
+import "swiper/css";
+import { Header, Banner } from "./pages";
 
 export default function App() {
   return (

@@ -5,6 +5,7 @@ import transformer from "../images/transformer.jpg";
 import MovieContent from "../components/MovieContent";
 import MovieDate from "../components/MovieDate";
 import PlayBtn from "../components/PlayBtn";
+import MovieSwiper from "../components/MovieSwiper";
 
 function Banner() {
   const [movies, setMovies] = useState([]);
@@ -39,6 +40,7 @@ function Banner() {
           </div>
         </div>
       </div>
+      {movies && movies.length > 0 && <MovieSwiper slides={movies} />}
     </div>
   );
 }
