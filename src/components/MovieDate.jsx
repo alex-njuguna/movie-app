@@ -1,9 +1,9 @@
 import "./movieDate.css";
 
-function MovieDate() {
+function MovieDate({ movie }) {
   return (
     <div className="date">
-      <h2>On 14th August</h2>
+      <h2>{movie.date}</h2>
     </div>
   );
 }
