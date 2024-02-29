@@ -21,26 +21,41 @@ function Banner() {
     fetchData();
   }, []);
 
+  const handleSlidechange = (id) => {
+    console.log(id);
+  };
+
   return (
     <div className="banner">
-      <div className="movie">
-        <img src={transformer} alt="backgound image" className="bgImg active" />
-        <div className="container-fluid">
-          <div className="row">
-            {/* left column */}
-            <div className="col-md-6">
-              <MovieContent />
-            </div>
+      {movies &&
+        movies.length > 0 &&
+        movies.map((movie) => (
+          <div className="movie">
+            <img
+              src={movie.bgImg}
+              alt="backgound image"
+              className={`bgImg ${movie.active ? "active" : undefined}`}
+            />
+            <div className="container-fluid">
+              <div className="row">
+                {/* left column */}
+                <div className="col-md-6">
+                  <MovieContent movie={movie} />
+                </div>
 
-            {/* right column */}
-            <div className="col-md-6">
-              <MovieDate />
-              <PlayBtn />
+                {/* right column */}
+                <div className="col-md-6">
+                  <MovieDate movie={movie} />
+                  <PlayBtn movie={movie} />
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      {movies && movies.length > 0 && <MovieSwiper slides={movies} />}
+        ))}
+
+      {movies && movies.length > 0 && (
+        <MovieSwiper slides={movies} slideChange={handleSlidechange} />
+      )}
     </div>
   );
 }

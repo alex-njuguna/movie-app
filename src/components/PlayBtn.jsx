@@ -2,7 +2,7 @@ import "./playBtn.css";
 
 function PlayBtn() {
   return (
-    <div className="trailer d-flex align-items-center justify-content-center active">
+    <div className="trailer d-flex align-items-center justify-content-center">
       <a href="#" className="playBtn btn btn-danger btn-outline-danger">
         <i className="fa-solid fa-play fa-lg text-danger"></i>
       </a>
