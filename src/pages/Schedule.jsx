@@ -54,7 +54,26 @@ function Schedule() {
 
   useEffect(() => {
     setMovies(data);
-  }, []);
+  }, [data]);
+
+  const handleFilterMovie = (category) => {
+    setFilters(
+      filters.map((filter) => {
+        filter.active = false;
+        if (filter.name === category) {
+          filter.active = true;
+        }
+        return filter;
+      })
+    );
+
+    if (category === "All") {
+      setMovies(data);
+      return;
+    }
+    const filteredMovies = data.filter((movie) => movie.category === category);
+    setMovies(filteredMovies);
+  };
 
   return (
     <section id="schedule" className="schedule">
@@ -65,7 +84,13 @@ function Schedule() {
         <div className="row">
           <ul className="filters">
             {filters.map((filter) => (
-              <li key={filter._id}>{filter.name}</li>
+              <li
+                key={filter._id}
+                className={`${filter.active ? "active" : undefined}`}
+                onClick={() => handleFilterMovie(filter.name)}
+              >
+                {filter.name}
+              </li>
             ))}
           </ul>
         </div>
