@@ -53,15 +53,13 @@ section .section-title::after {
   bottom: -30px;
   height: 5px;
   width: 50%;
-  background: linear-gradient(90deg var(--primary) var(--primary) transparent);
+  background: linear-gradient(90deg, var(--primary), var(--primary), transparent);
   z-index: 1000;
 }
 
 section p {
-    font-weight: 300;
-    color: #111111;
-    letter-spacing: 1px;
-    margin-bottom: 40px;
+  font-weight: 300;
+  color: #111111;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
 }
-
-
