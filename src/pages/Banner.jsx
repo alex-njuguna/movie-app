@@ -22,7 +22,14 @@ function Banner() {
   }, []);
 
   const handleSlidechange = (id) => {
-    console.log(id);
+    const newMovies = movies.map((movie) => {
+      movie.active = false;
+      if (movie._id === id) {
+        movie.active = true;
+      }
+      return movie;
+    });
+    setMovies(newMovies);
   };
 
   return (
@@ -30,7 +37,7 @@ function Banner() {
       {movies &&
         movies.length > 0 &&
         movies.map((movie) => (
-          <div className="movie">
+          <div className="movie" key={movie._id}>
             <img
               src={movie.bgImg}
               alt="backgound image"
