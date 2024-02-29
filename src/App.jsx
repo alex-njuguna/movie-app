@@ -1,7 +1,7 @@
 import "./App.css";
 // swiper
 import "swiper/css";
-import { Header, Banner, Main } from "./pages";
+import { Header, Banner, Main, Footer } from "./pages";
 
 export default function App() {
   return (
@@ -9,6 +9,7 @@ export default function App() {
       <Header />
       <Banner />
       <Main />
+      <Footer/>
     </>
   );
 }
